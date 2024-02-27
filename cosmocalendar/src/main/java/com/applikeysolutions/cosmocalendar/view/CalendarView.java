@@ -172,7 +172,9 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
         int disabledDayTextColor = typedArray.getColor(R.styleable.CalendarView_disabledDayTextColor, ContextCompat.getColor(getContext(), R.color.default_disabled_day_text_color));
         int selectionBarMonthTextColor = typedArray.getColor(R.styleable.CalendarView_selectionBarMonthTextColor, ContextCompat.getColor(getContext(), R.color.default_selection_bar_month_title_text_color));
         int previousMonthIconRes = typedArray.getResourceId(R.styleable.CalendarView_previousMonthIconRes, R.drawable.ic_chevron_left_gray);
+        int previousMonthIconBackgroundColor = typedArray.getColor(R.styleable.CalendarView_previousMonthIconBackgroundColor, ContextCompat.getColor(getContext(), R.color.default_navigation_button_background));
         int nextMonthIconRes = typedArray.getResourceId(R.styleable.CalendarView_nextMonthIconRes, R.drawable.ic_chevron_right_gray);
+        int nextMonthIconBackgroundColor = typedArray.getColor(R.styleable.CalendarView_nextMonthIconBackgroundColor, ContextCompat.getColor(getContext(), R.color.default_navigation_button_background));
 
         setBackgroundColor(calendarBackgroundColor);
         settingsManager.setCalendarBackgroundColor(calendarBackgroundColor);
@@ -199,7 +201,9 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
         settingsManager.setShowDaysOfWeekTitle(showDaysOfWeekTitle);
         settingsManager.setSelectionType(selectionType);
         settingsManager.setPreviousMonthIconRes(previousMonthIconRes);
+        settingsManager.setPreviousMonthIconBackgroundColor(previousMonthIconBackgroundColor);
         settingsManager.setNextMonthIconRes(nextMonthIconRes);
+        settingsManager.setNextMonthIconBackgroundColor(nextMonthIconBackgroundColor);
     }
 
     private void handleWeekendDaysAttributes(TypedArray typedArray) {
@@ -419,6 +423,9 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
     private void setPreviousNavigationButton() {
         ivPrevious = (ImageView) flNavigationButtons.findViewById(R.id.iv_previous_month);
         ivPrevious.setImageResource(settingsManager.getPreviousMonthIconRes());
+        Drawable backgroundDrawable = getContext().getResources().getDrawable(R.drawable.button_background);
+        backgroundDrawable.setColor(settingsManager.getPreviousMonthIconBackgroundCOlor());
+        ivPrevious.setBackground(backgroundDrawable);
         ivPrevious.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -430,6 +437,9 @@ public class CalendarView extends RelativeLayout implements OnDaySelectedListene
     private void setNextNavigationButton() {
         ivNext = (ImageView) flNavigationButtons.findViewById(R.id.iv_next_month);
         ivNext.setImageResource(settingsManager.getNextMonthIconRes());
+        Drawable backgroundDrawable = getContext().getResources().getDrawable(R.drawable.button_background);
+        backgroundDrawable.setColor(settingsManager.getNextMonthIconBackgroundCOlor());
+        ivNext.setBackground(backgroundDrawable);
         ivNext.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -59,8 +59,14 @@ public class AppearanceModel implements AppearanceInterface {
     //Icon resource of previous month navigation button
     private int previousMonthIconRes;
 
+    //Background color of previous month navigation button
+    private int previousMonthIconBackgroundColor;
+
     //Icon resource of next month navigation button
     private int nextMonthIconRes;
+
+    //Background color of next month navigation button
+    private int nextMonthIconBackgroundColor;
 
     /**
      * Orientation of calendar
@@ -178,8 +184,18 @@ public class AppearanceModel implements AppearanceInterface {
     }
 
     @Override
+    public int getPreviousMonthIconBackgroundColor() {
+        return previousMonthIconBackgroundColor;
+    }
+
+    @Override
     public int getNextMonthIconRes() {
         return nextMonthIconRes;
+    }
+
+    @Override
+    public int getNextMonthIconBackgroundColor() {
+        return nextMonthIconBackgroundColor;
     }
 
     @Override
@@ -293,8 +309,18 @@ public class AppearanceModel implements AppearanceInterface {
     }
 
     @Override
+    public void setPreviousMonthIconBackgroundColor(int previousMonthIconBackgroundColor) {
+        this.previousMonthIconBackgroundColor = previousMonthIconBackgroundColor;
+    }
+
+    @Override
     public void setNextMonthIconRes(int nextMonthIconRes) {
         this.nextMonthIconRes = nextMonthIconRes;
+    }
+
+    @Override
+    public void setNextMonthIconBackgroundColor(int nextMonthIconBackgroundColor) {
+        this.nextMonthIconBackgroundColor = nextMonthIconBackgroundColor;
     }
 
     @Override

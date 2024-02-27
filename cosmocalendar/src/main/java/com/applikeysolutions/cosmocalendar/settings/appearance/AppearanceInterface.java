@@ -42,7 +42,11 @@ public interface AppearanceInterface {
 
     int getPreviousMonthIconRes();
 
+    int getPreviousMonthIconBackgroundColor();
+
     int getNextMonthIconRes();
+
+    int getNextMonthIconBackgroundColor();
 
     boolean isShowDaysOfWeek();
 
@@ -88,7 +92,11 @@ public interface AppearanceInterface {
 
     void setPreviousMonthIconRes(int previousMonthIconRes);
 
+    void setPreviousMonthIconBackgroundColor(int previousMonthIconBackgroundColor);
+
     void setNextMonthIconRes(int nextMonthIconRes);
+
+    void setNextMonthIconBackgroundColor(int nextMonthIconBackgroundColor);
 
     void setShowDaysOfWeek(boolean showDaysOfWeek);
 

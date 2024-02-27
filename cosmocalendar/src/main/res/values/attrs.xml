@@ -50,7 +50,9 @@
         </attr>
 
         <attr name="previousMonthIconRes" format="reference" />
+        <attr name="previousMonthIconBackgroundColor" format="color" />
         <attr name="nextMonthIconRes" format="reference" />
+        <attr name="nextMonthIconBackgroundColor" format="color" />
 
         <attr name="weekendDayTextColor" format="color" />
         <attr name="weekendDays">

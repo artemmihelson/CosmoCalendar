@@ -153,8 +153,18 @@ public class SettingsManager implements AppearanceInterface, DateInterface, Cale
     }
 
     @Override
+    public int getPreviousMonthIconBackgroundColor() {
+        return appearanceModel.getPreviousMonthIconBackgroundColor();
+    }
+
+    @Override
     public int getNextMonthIconRes() {
         return appearanceModel.getNextMonthIconRes();
+    }
+
+    @Override
+    public int getNextMonthIconBackgroundColor() {
+        return appearanceModel.getNextMonthIconBackgroundColor();
     }
 
     @Override
@@ -268,10 +278,19 @@ public class SettingsManager implements AppearanceInterface, DateInterface, Cale
     }
 
     @Override
+    public void setPreviousMonthIconBackgroundColor(int previousMonthIconBackgroundColor) {
+        appearanceModel.setPreviousMonthIconBackgroundColor(previousMonthIconBackgroundColor);
+    }
+
+    @Override
     public void setNextMonthIconRes(int nextMonthIconRes) {
         appearanceModel.setNextMonthIconRes(nextMonthIconRes);
     }
 
+    @Override
+    public void setNextMonthIconBackgroundColor(int nextMonthIconBackgroundColor) {
+        appearanceModel.setNextMonthIconBackgroundColor(nextMonthIconBackgroundColor);
+    }
     @Override
     public void setShowDaysOfWeek(boolean showDaysOfWeek) {
         appearanceModel.setShowDaysOfWeek(showDaysOfWeek);

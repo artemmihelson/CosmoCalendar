@@ -19,5 +19,6 @@
     <color name="default_disabled_day_text_color">#c9cacd</color>
     <color name="default_border_color">#ececec</color>
     <color name="default_selection_bar_month_title_text_color">#c9cacd</color>
+    <color name="default_navigation_button_background">@android:color/white</color>
 
 </resources>
